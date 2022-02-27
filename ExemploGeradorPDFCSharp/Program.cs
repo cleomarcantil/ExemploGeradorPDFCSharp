@@ -1,5 +1,5 @@
 ﻿using Dados;
-using ExenploGeradorPDFCSharp.GeraPDF;
+using ExemploGeradorPDFCSharp.GeraPDF;
 using QuestPDF.Fluent;
 using System.Diagnostics;
 

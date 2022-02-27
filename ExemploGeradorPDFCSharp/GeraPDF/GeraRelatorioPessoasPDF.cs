@@ -4,7 +4,7 @@ using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
-namespace ExenploGeradorPDFCSharp.GeraPDF;
+namespace ExemploGeradorPDFCSharp.GeraPDF;
 
 public class GeraRelatorioPessoasPDF : IDocument
 {
