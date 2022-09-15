@@ -17,6 +17,6 @@ public class DadosRelatoriosPessoas
 public class Pessoa
 {
 	public int Id { get; set; }
-	public string Nome { get; set; }
-	public string Profissao { get; set; }
+	public required string Nome { get; set; }
+	public required string Profissao { get; set; }
 }

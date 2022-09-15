@@ -35,23 +35,26 @@ public class GeraRelatorioPessoasPDF : IDocument
 
     private void ComposeHeader(IContainer container)
     {
-        var titleStyle = TextStyle.Default.Size(16).SemiBold().Color(Colors.Blue.Medium);
+        var titleStyle = TextStyle.Default
+            .FontSize(16)
+            .SemiBold()
+            .FontColor(Colors.Blue.Medium);
 
         container.Row(row =>
         {
             row.RelativeItem().Column(column =>
             {
-                column.Item().Text(dadosRelatoriosPessoas.Titulo, titleStyle);
+                column.Item().Text(dadosRelatoriosPessoas.Titulo).Style(titleStyle);
 
                 column.Item().Text(text =>
                 {
-                    text.Span("Data: ", TextStyle.Default.SemiBold());
+                    text.Span("Data: ").Style(TextStyle.Default.SemiBold());
                     text.Span($"{DateTime.Now:d}");
                 });
 
                 column.Item().Text(text =>
                 {
-                    text.Span("Hora: ", TextStyle.Default.SemiBold());
+                    text.Span("Hora: ").Style(TextStyle.Default.SemiBold());
                     text.Span($"{DateTime.Now:T}");
                 });
             });
@@ -87,9 +90,9 @@ public class GeraRelatorioPessoasPDF : IDocument
             // step 2
             table.Header(header =>
             {
-                header.Cell().Text("Id", headerStyle);
-                header.Cell().Text("Nome", headerStyle);
-                header.Cell().AlignRight().Text("Profissão", headerStyle);
+                header.Cell().Text("Id").Style(headerStyle);
+                header.Cell().Text("Nome").Style(headerStyle);
+                header.Cell().AlignRight().Text("Profissão").Style(headerStyle);
 
                 header.Cell().ColumnSpan(3)
                     .PaddingVertical(5).BorderBottom(1).BorderColor(Colors.Black);
